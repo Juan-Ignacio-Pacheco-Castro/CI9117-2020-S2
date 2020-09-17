@@ -24,11 +24,8 @@ array_t* array_create(size_t capacity)
 	array->count = 0;
 
 	array->elements = (void**)malloc( capacity * sizeof(void*) );
-	if ( array->elements == NULL ) {
-        free(array);
-        NULL;
-    }
-		
+	if ( array->elements == NULL )
+		return free(array), NULL;
 
 	return array;
 }
@@ -46,7 +43,8 @@ int array_increase_capacity(array_t* array)
 	assert(array);
 
 	size_t new_capacity = 10 * array->capacity;
-	void** new_elements = (void**)realloc( array->elements, new_capacity * sizeof(void*) );
+	void** new_elements = (void**)realloc( array->elements, new_capacity 
+			* sizeof(void*) );
 	if ( new_elements == NULL )
 		return -1;
 

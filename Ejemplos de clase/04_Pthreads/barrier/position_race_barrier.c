@@ -41,7 +41,6 @@ void* run(void* args) {
     printf("Thread %zu/%zu: I am ready!\n", thread_num, shared_data->total);
 
 	pthread_barrier_wait(&shared_data->start_barrier);
-    double start_time = getCurrentTime();
 
     pthread_mutex_lock(&shared_data->mutex_position);
 
