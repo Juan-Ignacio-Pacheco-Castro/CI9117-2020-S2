@@ -72,7 +72,7 @@ int array_decrease_capacity(array_t* array)
 	return 0; // Success
 }
 
-size_t array_get_count(const array_t* array)
+size_t array_get_count(array_t* array)
 {
 	assert(array);
 
@@ -100,7 +100,7 @@ int array_append(array_t* array, void* element)
 	return 0; // Success
 }
 
-size_t array_find_first(const array_t* array, const void* element, size_t start_pos)
+size_t array_find_first(array_t* array, const void* element, size_t start_pos)
 {
 	assert( array );
 
