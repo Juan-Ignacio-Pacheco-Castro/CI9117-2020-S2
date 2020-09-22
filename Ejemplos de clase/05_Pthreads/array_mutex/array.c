@@ -106,7 +106,8 @@ int array_append(array_t* array, void* element)
 	pthread_mutex_lock(&array->mutex);
 	if ( array->count == array->capacity )
 		if ( array_increase_capacity(array) ) {
-			return pthread_mutex_unlock(&array->mutex), -1;
+			pthread_mutex_unlock(&array->mutex);
+			return -1;
 		}
 
 	assert( array->count < array->capacity );
@@ -144,7 +145,8 @@ int array_remove_first(array_t* array, const void* element, size_t start_pos)
 	pthread_mutex_lock(&array->mutex);
 	size_t index = array_find_first_private(array, element, start_pos);
 	if ( index == array_not_found ) {
-		return pthread_mutex_unlock(&array->mutex), -1;
+		pthread_mutex_unlock(&array->mutex);
+		return -1;
 
 	}
 
