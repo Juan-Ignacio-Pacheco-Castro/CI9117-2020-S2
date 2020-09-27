@@ -43,7 +43,7 @@ double walltime_elapsed(const walltime_t* start)
 Modifique su solución al ejercicio anterior para recibir un argumento adicional que indica la cantidad de trabajadores (threads) en la línea de comandos.
 Modifique el método que calcula el área bajo la curva para que la estimación con los rectángulos sea distribuida entre la cantidad de threads disponible. Asegúrese de no generar fugas de memoria ni condiciones de carrera.
 
-Ejecute los programas de ambos ejericios para *n = 1*, *n = 10*, *n = 1,000* y *n = 1,000,000* (si el hardware lo permite), utilizando los mismos valores de *a* y *b* en cada ejecución. Para el caso del programa que utiliza pthreads, realice ejeciciones usando 1, 16, 32 y 64 hilos.
+Ejecute los programas de ambos ejercicios para *n = 1*, *n = 10*, *n = 1,000* y *n = 1,000,000* (si el hardware lo permite), utilizando los mismos valores de *a* y *b* en cada ejecución. Para el caso del programa que utiliza pthreads, realice ejeciciones usando 1, 16, 32 y 64 hilos.
 Apunte la duración de cada ejecución y asegúrese de obtener las mismas áreas estimadas por la versión serial y concurrente. Agregue los datos de la comparación al archivo .md de este ejercicio, por ej:
 | n | area | serial | 1  | 16 | 32 | 64 |
 |---|---|---|---|---|---|---|
