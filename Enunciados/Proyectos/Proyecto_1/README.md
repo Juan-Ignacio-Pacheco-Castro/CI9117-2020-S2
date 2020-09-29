@@ -2,7 +2,7 @@
 
 ### Instrucciones generales
 
-**Fecha de entrega:** Lunes 19 de Octubre 11:50pm.
+**Fecha de entrega:** Jueves 22 de Octubre 11:50pm.
 
 ### Introducción
 
