@@ -39,10 +39,10 @@ void* run(void* args) {
     fixed_sleep((useconds_t)data->runner->preparation_time);
     *data->lane_start = 1;
 
-    printf("Tread %d: Ready!\n", data->runner->id);
+    printf("thread %d: Ready!\n", data->runner->id);
     pthread_barrier_wait(data->barrier_start_line);
 
-    printf("Tread %d: Go!!!\n", data->runner->id);
+    printf("thread %d: Go!!!\n", data->runner->id);
     // Running!! 
     double running_time_obstacle = data->runner->running_time/NUM_OBSTACLES;
     for (int i = 0; i < NUM_OBSTACLES; ++i) {
@@ -58,7 +58,7 @@ void* run(void* args) {
     
     data->lane_obstacles[NUM_OBSTACLES-1] = 0;
     *data->lane_finish = *data->position;
-    printf("Tread %d: Arrived at position %d\n", data->runner->id, *data->position);
+    printf("thread %d: Arrived at position %d\n", data->runner->id, *data->position);
     *data->position = *data->position + 1;
 
     pthread_mutex_unlock(data->mutex_position);

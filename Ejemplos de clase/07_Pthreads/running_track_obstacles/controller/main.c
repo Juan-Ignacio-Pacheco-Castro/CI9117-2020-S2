@@ -11,8 +11,10 @@ int start_race() {
 
 	srand( time(NULL) );
 
+    pthread_mutex_lock(&mutex_running_track);
     running_track = running_track_create();
-    
+    pthread_mutex_unlock(&mutex_running_track);
+
     run_data_t* run_data_list = malloc(NUM_LANES * sizeof(run_data_t));
     
     pthread_t* runner_threads = malloc(NUM_LANES * sizeof(pthread_t));
@@ -37,15 +39,17 @@ int start_race() {
         printf("lane %d: %d\n", i, running_track->lanes_finish_line[i]); 
     }
 
+    pthread_mutex_lock(&mutex_running_track);
     running_track_destroy(running_track);
+    running_track = NULL;
+    pthread_mutex_unlock(&mutex_running_track);
+
     for (int i = 0 ; i < NUM_LANES; ++i) {
         runner_destroy(run_data_list[i].runner);
     }
 
     free(run_data_list);
     free(runner_threads);
-
-    running_track = 0;
 
     return 0;
 }
