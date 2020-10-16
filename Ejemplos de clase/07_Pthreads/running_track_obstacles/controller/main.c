@@ -23,6 +23,7 @@ int start_race() {
         run_data_list[i].runner = runner_create(i, 1000 + (rand() % 4000), 5000 + (rand() % 11000));
         run_data_list[i].lane_start = &running_track->lanes_start_line[i];
         run_data_list[i].lane_finish = &running_track->lanes_finish_line[i];
+        run_data_list[i].lane_obstacles = running_track->obstacles[i];
         run_data_list[i].position = &running_track->position;
 
         pthread_create(&runner_threads[i], NULL, run, (void*)&run_data_list[i]);
@@ -48,3 +49,4 @@ int start_race() {
 
     return 0;
 }
+
