@@ -27,7 +27,7 @@ reduction
 
 Investigue sobre dichas directivas haciendo uso de la [especificación y manual de referencia de OpenMP](https://www.openmp.org/specifications/).
 
-Ejecute el programa con diferentes valores de *n* (*n = 1*, *n = 1,000* y *n = 1,000,000*, ..., *n = 1,000,000,000*) y utilizando valores fijos de *a* y *b* en cada ejecución. Realice ejecuciones usando 1, 16, 32 y 64 hilos.
+Ejecute el programa con diferentes valores de *n* (*n = 1*, *n = 1,000* y *n = 1,000,000*, ..., *n = 1,000,000,000*) y utilizando valores fijos de *a* y *b* en cada ejecución. Realice ejecuciones usando 1, 16, 32, 64 y 128 hilos.
 Apunte la duración de cada ejecución y asegúrese de obtener las mismas áreas estimadas en cada prueba. Agregue los datos de la comparación al archivo .md de este ejercicio, por ej:
 | n | area | 1 | 16  | 32 | 64 | 128 |
 |---|---|---|---|---|---|---|
