@@ -22,7 +22,7 @@ omp critical
 El número de hilos a utilizar se definirá como una constante en en método *main* y puede realizar alguna validación para que la cantidad de valores pasados como parámetro sea múltiplo de dicha constante. El programa deberá imprimir el número de hilo y el número de la lista que está siendo procesado, así como el resultado del promedio final. Por ejemplo:
 
 ```
-$ ./average 3 10 20 30 40 50 60
+$ ./average 10 20 30 40 50 60
 Thread 0: Processing number 10
 Thread 1: Processing number 30
 Thread 2: Processing number 50
