@@ -18,7 +18,8 @@ Modifique el código de la solución [average.cpp](https://github.com/jocan3/CI9
 omp parallel
 omp critical
 ```
-El programa debe asumir que el primer parámetro recibido corresponde al número de hilos a utilizar y los siguientes parámetros corresponden a la lista de números enteros a los cuales les vamos a calcular el promedio. El programa deberá imprimir el número de hilo y el número de la lista que está siendo procesado, así como el resultado del promedio final. Por ejemplo:
+
+El número de hilos a utilizar se definirá como una constante en en método *main* y puede realizar alguna validación para que la cantidad de valores pasados como parámetro sea múltiplo de dicha constante. El programa deberá imprimir el número de hilo y el número de la lista que está siendo procesado, así como el resultado del promedio final. Por ejemplo:
 
 ```
 $ ./average 3 10 20 30 40 50 60
@@ -43,6 +44,8 @@ static void calculate_sum(char **array, int array_size, double* global_sum) {
 }
 ```
 Este método deberá calcular la sección del arreglo que va a procesar cada hilo y realizar una sumatoria local en un ciclo para los números de dicha sección. Por último sumará dicho valor a la variable global *global_sum*. Utilice las funciones de OpenMP para obtener el número de hilo y la cantidad total de hilos. Asegúrese de proteger/sincronizar el acceso a la memoria compartida.
+
+**Opcional:** Modifique su código para que el número de hilos a utilizar corresponda al primer valor del arreglo y elimine la validación de que la cantidad de valores sera múltiplo del número de hilos. O sea, que funcione para cualquier cantidad de hilos y tamaño de arreglo.
 
 ## Ejercicio 2[average_parallel_for]
 
