@@ -20,13 +20,13 @@ Explique en un archivo .md en qué consiste la opción de agregar un nombre a la
 Explique en un archivo .md cómo funciona la directiva *omp barrier*. Agregue un pequeño programa en C o C++ que incluya esta directiva como ejemplo.
 
 #### [omp_lock]
-Explique en un archivo .md cómo funciona la directiva *omp lock*. Agregue un pequeño programa en C o C++ que incluya esta directiva como ejemplo.
+Explique en un archivo .md cómo funciona los *locks* en OpenMP (Funciones *omp_set_lock* y *omp_unset_lock*). Agregue un pequeño programa en C o C++ que incluya esta directiva como ejemplo.
 
 #### [omp_for]
 Explique en un archivo .md cómo funciona la directiva *omp for* (note que es diferente a *omp parallel for*) y en qué condiciones se puede utilizar. Agregue un pequeño programa en C o C++ que incluya esta directiva como ejemplo.
 
 #### [omp_do]
-Explique en un archivo .md cómo funciona la directiva *omp do*. Agregue un pequeño programa en C o C++ que incluya esta directiva como ejemplo.
+Explique en un archivo .md cómo funciona la directiva *omp do*. Agregue código de ejemplo que muestre el uso de esta directiva.
 
 #### [omp_get_max_threads]
 Explique en un archivo .md en qué consiste la función *omp_get_max_threads*. Implemente un pequeño programa en C o C++ que incluya esta función como ejemplo e imprima en consola el valor retornado.
