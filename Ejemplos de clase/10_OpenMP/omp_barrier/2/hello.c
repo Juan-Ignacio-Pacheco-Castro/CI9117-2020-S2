@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
+#include <unistd.h>
 
 void helloWorld() {
     printf("Hello world from thread number # %i\n", omp_get_thread_num());
 }
 
-int main(int argc, char* arg[]) {
-
-    // arg[0] = command
-    // arg[1] = first param
+int main(int argc, char* arg[]) 
+{  
 
     size_t thread_count = 0;
 
@@ -22,34 +21,18 @@ int main(int argc, char* arg[]) {
 
     int position = 1;
 
-    int max = omp_get_max_threads();
-
-    printf("Max %d \n", max);
-
     #pragma omp parallel num_threads(thread_count) default(none) shared(position)
     {
+        printf("I'm thread %d, I'm ready!\n",omp_get_thread_num());        
+        #pragma omp barrier// Aqui los hilos esperan a que todos esten listos para continuar
+        printf("We're all ready, go!\n");
+        usleep(1000);
         #pragma omp critical 
         {
             printf("Thread %i: position %i\n", omp_get_thread_num(), position);
             ++position;
         }
-    }
-
-    /*
-    pthread_t* threads = malloc((size_t)(thread_count * sizeof(pthread_t)));
-
-    for (size_t i = 0; i < thread_count; ++i) {
-        pthread_create(&threads[i], NULL, helloWorld, (void*)i);
-    }
-
-    printf("Hello world from main thread\n");
-
-    for (size_t i = 0; i < thread_count; ++i) {
-        pthread_join(threads[i], NULL);
-    }
-
-    free(threads);
-    */
+    }    
 
     return 0;
 }
