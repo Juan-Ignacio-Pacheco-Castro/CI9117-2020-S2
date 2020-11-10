@@ -1,4 +1,4 @@
-# CI0117 - Actividad de clase 5
+# CI0117 - Actividad de clase 7
 
 ### Instrucciones generales
 
