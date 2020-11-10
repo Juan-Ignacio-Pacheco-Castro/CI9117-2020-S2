@@ -175,7 +175,7 @@ La documentación del proyecto debe contener las siguientes secciones:
 
 * Documentación externa (10%)
 
-* Creatividad en general (10% extra)
+* Creatividad en general (10 puntos extra sobre la nota del proyecto)
 
 ### Entrega
 
