@@ -8,7 +8,7 @@ Este laboratorio se podrá realizar en grupos de máximo 2 personas.
 Las soluciones a los ejercicios de este laboratorio deberán ser subidas a su repositorio *CI0117-2020-S2* creado para este curso en Github. Dentro de dicho repositorio se deberá crear un folder con el nombre *laboratorios*. La solución a cada laboratorio deberá estar contenida dentro de un folder con el respectivo número dentro del folder *laboratorios*. A su vez, la solución al ejercicio deberá subirse en un folder con el nombre indicado entre paréntesis cuadrados.
 Agregue un archivo *Makefile* para cada uno de los ejercicios con los comandos necesarios para compilar el codigo fuente, de forma que el ejecutable tenga el mismo nombre dado en el ejercicio.
 
-Las soluciones o respuestas que no son código, deberán estar en un archivo .md en el folder del ejercicio respectivo. Asegúrese de subir al repositorio únicamente archivos .c, .md y Makefile. Cree un archivo .gitignore para evitar subir archivos ejecutables.
+Las soluciones o respuestas que no son código, deberán estar en un archivo .md en el folder del ejercicio respectivo. Asegúrese de subir al repositorio únicamente archivos .c/.cpp, .md y Makefile. Cree un archivo .gitignore para evitar subir archivos ejecutables.
 
 Únicamente uno de los integrantes del grupo requiere subir la solución. **Indique en el archivo README.md el nombre de ambos integrantes**.
 
