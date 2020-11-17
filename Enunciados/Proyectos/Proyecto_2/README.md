@@ -169,9 +169,9 @@ La documentación del proyecto debe contener las siguientes secciones:
 
 * Código (40%)
   * 10% Clean code
-  * 15% Clases y estructuras de datos
+  * 10% Clases y estructuras de datos
   * 15% Manejo de paso de mensajes (MPI)
-  * 10% Documentación interna
+  * 05% Documentación interna
 
 * Documentación externa (10%)
 
