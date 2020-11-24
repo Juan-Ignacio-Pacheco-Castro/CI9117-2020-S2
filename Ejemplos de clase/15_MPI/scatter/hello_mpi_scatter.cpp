@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     MPI_Comm_size(MPI_COMM_WORLD, &num_processes);
     MPI_Comm_rank(MPI_COMM_WORLD, &my_id);
 
-    int array_sent_size = num_processes * 3; 
+    int array_sent_size = (num_processes * 3) - 10; 
 
    array_sent = new int[array_sent_size];
    array_received = new int[3];
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
             array_sent[i] = 2020 + i;
     }
 
-    MPI_Scatter(&array_sent, 3, MPI_INT, &array_received, 3, MPI_INT, 0, MPI_COMM_WORLD);
+    MPI_Scatter(array_sent, 3, MPI_INT, array_received, 3, MPI_INT, 0, MPI_COMM_WORLD);
 
     if (my_id != 0) {
         MPI_Recv(&message_received, 1 /* count*/, MPI_INT, my_id - 1 /*source*/, 123 /*message id*/, MPI_COMM_WORLD, &status);
